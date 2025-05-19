@@ -1,0 +1,1010 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Apex Marketing Services - Professional Digital Marketing and Web Development Solutions">
+    <meta name="keywords" content="marketing, web development, digital solutions, branding">
+    <title>Apex Marketing Services</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <style>
+        /* Reset and Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f9f9f9;
+        }
+        
+        /* Typography */
+        h1 {
+            font-size: 3rem;
+            font-weight: 900;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+        
+        /* Header Styles */
+        .bb-header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(5px);
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .bb-logo {
+            font-size: 1.8rem;
+            font-weight: 900;
+            color: #333;
+        }
+        
+        .bb-nav {
+            display: flex;
+            gap: 2rem;
+        }
+        
+        .bb-nav a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 600;
+            font-size: 0.9rem;
+            letter-spacing: 0.05em;
+            transition: color 0.3s;
+        }
+        
+        .bb-nav a:hover {
+            color: #ff6f91;
+        }
+        
+        .bb-nav-toggle {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+        }
+        
+        .bb-nav-toggle span {
+            width: 25px;
+            height: 3px;
+            background-color: #333;
+            transition: all 0.3s;
+        }
+        
+        /* Hero Section */
+        .bb-hero {
+            position: relative;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+            overflow: hidden;
+            background: linear-gradient(135deg, #fff6e9 0%, #ffedee 100%);
+        }
+        
+        .maxi-bg-gradient {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at top right, rgba(255, 111, 145, 0.2), transparent 70%),
+                         radial-gradient(circle at bottom left, rgba(132, 94, 194, 0.2), transparent 70%);
+            z-index: 0;
+        }
+        
+        .maxi-shape {
+            position: absolute;
+            border-radius: 50%;
+            z-index: 1;
+        }
+        
+        .maxi-shape1 {
+            width: 400px;
+            height: 400px;
+            top: -100px;
+            right: -100px;
+            background: linear-gradient(45deg, rgba(255, 111, 145, 0.1), rgba(132, 94, 194, 0.1));
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            animation: rotate 20s linear infinite;
+        }
+        
+        .maxi-shape2 {
+            width: 300px;
+            height: 300px;
+            bottom: -50px;
+            left: -50px;
+            background: linear-gradient(45deg, rgba(0, 201, 167, 0.1), rgba(249, 248, 113, 0.1));
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            animation: rotate 20s linear infinite reverse;
+        }
+        
+        .bb-hero-content {
+            position: relative;
+            z-index: 10;
+            text-align: center;
+            max-width: 800px;
+        }
+        
+        .maxi-headline {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            background: linear-gradient(90deg, #ff6f91 0%, #845ec2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            line-height: 1.1;
+            display: inline-block;
+        }
+        
+        .maxi-headline-accent {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            color: #333;
+            line-height: 1.1;
+        }
+        
+        .bb-hero-sub {
+            font-size: 1.2rem;
+            margin: 2rem 0;
+            color: #555;
+        }
+        
+        .maxi-highlight {
+            color: #ff6f91;
+            font-weight: 600;
+            animation: pulse 2s ease-in-out infinite;
+        }
+        
+        .bb-btn {
+            display: inline-block;
+            padding: 1rem 2.5rem;
+            font-size: 1rem;
+            font-weight: 700;
+            text-decoration: none;
+            border-radius: 32px;
+            transition: all 0.3s;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+        }
+        
+        .bb-btn-accent {
+            background: linear-gradient(90deg, #ff6f91 0%, #845ec2 100%);
+            color: white;
+            box-shadow: 0 4px 24px rgba(255, 111, 145, 0.18);
+        }
+        
+        .bb-btn-accent:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 28px rgba(255, 111, 145, 0.25);
+        }
+        
+        /* Floating animated icons */
+        .floating-icon {
+            position: absolute;
+            font-size: 3rem;
+            opacity: 0.1;
+            animation: float 6s ease-in-out infinite;
+            z-index: 1;
+        }
+        
+        .floating-icon-1 {
+            top: 20%;
+            left: 10%;
+            animation-delay: 0s;
+        }
+        
+        .floating-icon-2 {
+            top: 60%;
+            right: 15%;
+            animation-delay: 1s;
+        }
+        
+        .floating-icon-3 {
+            top: 30%;
+            right: 20%;
+            animation-delay: 2s;
+        }
+        
+        .floating-icon-4 {
+            bottom: 30%;
+            left: 15%;
+            animation-delay: 3s;
+        }
+        
+        .floating-icon-5 {
+            top: 70%;
+            left: 60%;
+            animation-delay: 4s;
+        }
+        
+        /* Divider */
+        .maxi-divider {
+            position: relative;
+            height: 120px;
+            overflow: hidden;
+            margin-top: -120px;
+        }
+        
+        /* Work Section */
+        .bb-work {
+            padding: 8rem 2rem 5rem;
+            background-color: #ff6f91;
+        }
+
+        .bb-section-title {
+            font-size: 2rem;
+            font-weight: 900;
+            text-align: center;
+            margin-bottom: 3rem;
+            color: white;
+            letter-spacing: 0.1em;
+        }
+
+        .bb-work-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .bb-work-card {
+            position: relative;
+            border-radius: 16px;
+            overflow: hidden;
+            height: 350px;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s;
+            text-decoration: none;
+        }
+
+        .bb-work-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+        }
+
+        .bb-work-img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            transition: all 0.5s;
+        }
+
+        .bb-work-card:hover .bb-work-img {
+            transform: scale(1.1);
+        }
+
+        .bb-work-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            padding: 2rem;
+            background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+            color: white;
+        }
+
+        .bb-work-title {
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .maxi-badge {
+            display: inline-block;
+            padding: 0.3rem 1rem;
+            border-radius: 100px;
+            font-size: 0.7rem;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+
+        .badge-pink {
+            background-color: #ff6f91;
+        }
+
+        .badge-blue {
+            background-color: #845ec2;
+        }
+
+        .badge-yellow {
+            background-color: #00c9a7;
+        }
+        
+        /* Services Section */
+        .bb-services {
+            padding: 5rem 2rem;
+            background-color: #f9f9f9;
+        }
+        
+        .bb-services .bb-section-title {
+            color: #333;
+        }
+        
+        .bb-services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .bb-service-card {
+            padding: 2rem;
+            border-radius: 16px;
+            background-color: white;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s;
+            text-decoration: none;
+            display: block;
+            color: inherit;
+        }
+        
+        .bb-service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        
+        .bb-service-title {
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: #ff6f91;
+        }
+        
+        .bb-service-desc {
+            color: #666;
+        }
+        
+        /* Impact Section */
+        .bb-impact {
+            padding: 5rem 2rem;
+            background: linear-gradient(135deg, #845ec2 0%, #00c9a7 100%);
+            color: white;
+        }
+        
+        .bb-impact-stats {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 3rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .bb-impact-card {
+            text-align: center;
+        }
+        
+        .bb-impact-number {
+            font-size: 3.5rem;
+            font-weight: 900;
+            margin-bottom: 0.5rem;
+        }
+        
+        .bb-impact-label {
+            font-size: 0.8rem;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+        }
+        
+        /* Contact Section */
+        .bb-contact {
+            padding: 5rem 2rem;
+            background-color: #f9f9f9;
+        }
+        
+        .bb-contact .bb-section-title {
+            color: #333;
+        }
+        
+        .bb-contact-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 3rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .bb-contact-label {
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: #ff6f91;
+        }
+        
+        .bb-contact-info {
+            color: #666;
+            font-size: 1.1rem;
+        }
+        
+        .bb-social-link {
+            color: #845ec2;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+        
+        .bb-social-link:hover {
+            color: #ff6f91;
+        }
+        
+        .bb-contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 1.2rem;
+            margin-top: 1rem;
+        }
+        
+        .bb-contact-form input,
+        .bb-contact-form textarea {
+            padding: 1rem;
+            border-radius: 12px;
+            border: 1.5px solid #ddd;
+            font-size: 1rem;
+            transition: all 0.3s;
+        }
+        
+        .bb-contact-form input:focus,
+        .bb-contact-form textarea:focus {
+            outline: none;
+            border-color: #ff6f91;
+            box-shadow: 0 0 0 3px rgba(255, 111, 145, 0.1);
+        }
+        
+        .btn-primary {
+            padding: 1rem 2.5rem;
+            font-size: 1.1rem;
+            font-weight: 900;
+            border-radius: 32px;
+            border: none;
+            background: linear-gradient(90deg, #ff6f91 0%, #845ec2 100%);
+            color: white;
+            box-shadow: 0 4px 24px rgba(255, 111, 145, 0.18);
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 28px rgba(255, 111, 145, 0.25);
+        }
+        
+        /* Footer */
+        .bb-footer {
+            padding: 3rem 2rem;
+            background-color: #333;
+            color: white;
+        }
+        
+        .bb-footer-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        
+        /* Animations */
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0px) rotate(0deg);
+            }
+            50% {
+                transform: translateY(-20px) rotate(180deg);
+            }
+        }
+        
+        @keyframes rotate {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
+        
+        @keyframes pulse {
+            0%, 100% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0.8;
+            }
+        }
+        
+        /* Media Queries */
+        @media (max-width: 768px) {
+            .bb-nav {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                flex-direction: column;
+                gap: 0;
+                background-color: white;
+                box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+            }
+            
+            .bb-nav.active {
+                display: flex;
+            }
+            
+            .bb-nav a {
+                padding: 1rem 2rem;
+                border-bottom: 1px solid #eee;
+            }
+            
+            .bb-nav-toggle {
+                display: flex;
+            }
+            
+            .bb-impact-stats {
+                flex-direction: column;
+                align-items: center;
+                gap: 2rem;
+            }
+
+            .bb-work-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .bb-work-card {
+                height: 400px;
+            }
+
+            .bb-work-img {
+                height: 50%;
+            }
+
+            .bb-work-content {
+                height: 50%;
+                padding: 1.5rem;
+            }
+
+            .bb-work-title {
+                font-size: 1.2rem;
+            }
+
+            .bb-work-desc {
+                font-size: 0.9rem;
+            }
+        }
+
+        /* Packages Section */
+        .bb-packages {
+            padding: 5rem 2rem;
+            background-color: #f9f9f9;
+        }
+
+        .bb-packages .bb-section-title {
+            color: #333;
+        }
+
+        .bb-packages-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .bb-package-card {
+            background: white;
+            border-radius: 16px;
+            padding: 2.5rem;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s;
+            text-align: center;
+            position: relative;
+        }
+
+        .bb-package-card.featured {
+            transform: scale(1.05);
+            border: 2px solid #ff6f91;
+            box-shadow: 0 8px 30px rgba(255, 111, 145, 0.15);
+        }
+
+        .bb-package-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+        }
+
+        .bb-package-card.featured:hover {
+            transform: scale(1.05) translateY(-10px);
+        }
+
+        .bb-package-title {
+            font-size: 1.5rem;
+            font-weight: 900;
+            color: #333;
+            margin-bottom: 1rem;
+        }
+
+        .bb-package-price {
+            font-size: 2.5rem;
+            font-weight: 900;
+            color: #ff6f91;
+            margin-bottom: 1rem;
+        }
+
+        .bb-package-price span {
+            font-size: 1rem;
+            color: #666;
+        }
+
+        .bb-package-desc {
+            color: #666;
+            margin-bottom: 2rem;
+            font-size: 0.9rem;
+        }
+
+        .bb-package-features {
+            list-style: none;
+            padding: 0;
+            margin: 0 0 2rem 0;
+            text-align: left;
+        }
+
+        .bb-package-features li {
+            padding: 0.5rem 0;
+            color: #555;
+            position: relative;
+            padding-left: 1.5rem;
+        }
+
+        .bb-package-features li:before {
+            content: "✓";
+            color: #ff6f91;
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+        }
+
+        .bb-package-card .bb-btn {
+            width: 100%;
+            text-align: center;
+        }
+
+        @media (max-width: 768px) {
+            .bb-package-card.featured {
+                transform: scale(1);
+            }
+            
+            .bb-package-card.featured:hover {
+                transform: translateY(-10px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Sticky Minimal Header -->
+    <header class="bb-header floating-nav">
+        <div class="bb-logo" style="margin: 0 auto; font-weight: 900; text-align: center;">APEX</div>
+        <nav class="bb-nav" id="bb-nav">
+            <a href="#work">WORK</a>
+            <a href="#services">SERVICES</a>
+            <a href="services.html">PACKAGES</a>
+            <a href="#impact">IMPACT</a>
+            <a href="#contact">CONTACT</a>
+        </nav>
+        <div class="bb-nav-toggle" id="bb-nav-toggle">
+            <span></span><span></span><span></span>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="bb-hero maximalist-hero">
+        <div class="maxi-bg-gradient"></div>
+        <div class="maxi-shape maxi-shape1"></div>
+        <div class="maxi-shape maxi-shape2"></div>
+        <!-- Add moving background images -->
+        <div class="floating-icon floating-icon-1">📱</div>
+        <div class="floating-icon floating-icon-2">💰</div>
+        <div class="floating-icon floating-icon-3">📈</div>
+        <div class="floating-icon floating-icon-4">🎯</div>
+        <div class="floating-icon floating-icon-5">✨</div>
+        <div class="bb-hero-content">
+            <h1><span class="maxi-headline">DIGITAL MARKETING</span><br><span class="maxi-headline-accent">WITH GLOBAL IMPACT</span></h1>
+            <p class="bb-hero-sub">An independent digital marketing studio based in Dubai, combining <span class="maxi-highlight">strategy</span>, <span class="maxi-highlight">creativity</span>, and <span class="maxi-highlight">technology</span>.</p>
+            <a href="#work" class="bb-btn bb-btn-accent maxi-btn">VIEW WORK</a>
+        </div>
+    </section>
+    <div class="maxi-divider">
+        <svg viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0,80 C480,160 960,0 1440,80 L1440,120 L0,120 Z" fill="#ff6f91"/></svg>
+    </div>
+
+    <!-- Work/Case Studies Section -->
+    <section class="bb-work" id="work">
+        <div class="bb-section-title">SELECTED WORK</div>
+        <div class="bb-work-grid">
+            <a href="case-study-1.html" class="bb-work-card maxi-card">
+                <div class="bb-work-img maxi-card-img" style="background-image: url('https://images.unsplash.com/photo-1576091160550-2173dba999ef?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80');"></div>
+                <div class="bb-work-overlay maxi-card-overlay">
+                    <div class="bb-work-title maxi-card-title">GLOBAL MEDICAL DEVICE LAUNCH</div>
+                    <span class="maxi-badge badge-pink">HEALTHCARE</span>
+                </div>
+            </a>
+            <a href="case-study-2.html" class="bb-work-card maxi-card">
+                <div class="bb-work-img maxi-card-img" style="background-image: url('https://images.unsplash.com/photo-1556911220-bff31c812dba?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80');"></div>
+                <div class="bb-work-overlay maxi-card-overlay">
+                    <div class="bb-work-title maxi-card-title">LUXURY LIGHTING BRAND AWARENESS</div>
+                    <span class="maxi-badge badge-blue">LIFESTYLE</span>
+                </div>
+            </a>
+            <a href="case-study-3.html" class="bb-work-card maxi-card">
+                <div class="bb-work-img maxi-card-img" style="background-image: url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80');"></div>
+                <div class="bb-work-overlay maxi-card-overlay">
+                    <div class="bb-work-title maxi-card-title">LAW FIRM DIGITAL TRANSFORMATION</div>
+                    <span class="maxi-badge badge-yellow">LEGAL</span>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <!-- Packages Section -->
+    <section class="bb-packages" id="packages">
+        <div class="bb-section-title">OUR PACKAGES</div>
+        <div class="bb-packages-grid">
+            <div class="bb-package-card">
+                <div class="bb-package-title">STARTER</div>
+                <div class="bb-package-price">$999<span>/month</span></div>
+                <div class="bb-package-desc">Perfect for small businesses starting their digital journey</div>
+                <ul class="bb-package-features">
+                    <li>Basic Website Design</li>
+                    <li>Social Media Management</li>
+                    <li>Monthly Analytics Report</li>
+                    <li>Email Marketing Setup</li>
+                </ul>
+                <a href="services.html" class="bb-btn bb-btn-accent">Learn More</a>
+            </div>
+            <div class="bb-package-card featured">
+                <div class="bb-package-title">PROFESSIONAL</div>
+                <div class="bb-package-price">$2,499<span>/month</span></div>
+                <div class="bb-package-desc">Ideal for growing businesses seeking comprehensive solutions</div>
+                <ul class="bb-package-features">
+                    <li>Advanced Website Development</li>
+                    <li>Full Social Media Strategy</li>
+                    <li>SEO Optimization</li>
+                    <li>Content Marketing</li>
+                    <li>Performance Analytics</li>
+                </ul>
+                <a href="services.html" class="bb-btn bb-btn-accent">Learn More</a>
+            </div>
+            <div class="bb-package-card">
+                <div class="bb-package-title">ENTERPRISE</div>
+                <div class="bb-package-price">$4,999<span>/month</span></div>
+                <div class="bb-package-desc">Complete digital transformation for established businesses</div>
+                <ul class="bb-package-features">
+                    <li>Custom Web Development</li>
+                    <li>Full Digital Strategy</li>
+                    <li>Advanced Analytics & CRO</li>
+                    <li>Multi-channel Marketing</li>
+                    <li>Dedicated Account Manager</li>
+                </ul>
+                <a href="services.html" class="bb-btn bb-btn-accent">Learn More</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Services Section -->
+    <section class="bb-services" id="services">
+        <div class="bb-section-title">OUR SERVICES</div>
+        <div class="bb-services-grid">
+            <a href="services/strategy.html" class="bb-service-card">
+                <div class="bb-service-title">STRATEGY & CONSULTING</div>
+                <div class="bb-service-desc">Brand strategy, digital audits, and marketing consulting to set your business up for success.</div>
+            </a>
+            <a href="services/web-design.html" class="bb-service-card">
+                <div class="bb-service-title">WEB DESIGN & DEVELOPMENT</div>
+                <div class="bb-service-desc">Modern, responsive websites and landing pages that convert visitors into customers.</div>
+            </a>
+            <a href="services/performance.html" class="bb-service-card">
+                <div class="bb-service-title">PERFORMANCE MARKETING</div>
+                <div class="bb-service-desc">SEO, SEM, and paid media campaigns to drive measurable growth and ROI.</div>
+            </a>
+            <a href="services/social.html" class="bb-service-card">
+                <div class="bb-service-title">SOCIAL MEDIA & CONTENT</div>
+                <div class="bb-service-desc">Content creation, social media management, and influencer marketing for brand engagement.</div>
+            </a>
+            <a href="services/analytics.html" class="bb-service-card">
+                <div class="bb-service-title">ANALYTICS & OPTIMIZATION</div>
+                <div class="bb-service-desc">Data-driven insights, reporting, and CRO to maximize your digital performance.</div>
+            </a>
+        </div>
+    </section>
+
+    <!-- Global Impact Section -->
+    <section class="bb-impact" id="impact">
+        <div class="bb-section-title">GLOBAL IMPACT</div>
+        <div class="bb-impact-stats">
+            <div class="bb-impact-card">
+                <div class="bb-impact-number">20</div>
+                <div class="bb-impact-label">COUNTRIES REACHED</div>
+            </div>
+            <div class="bb-impact-card">
+                <div class="bb-impact-number">1M+</div>
+                <div class="bb-impact-label">LEADS GENERATED</div>
+            </div>
+            <div class="bb-impact-card">
+                <div class="bb-impact-number">500</div>
+                <div class="bb-impact-label">CAMPAIGNS</div>
+            </div>
+            <div class="bb-impact-card">
+                <div class="bb-impact-number">100%</div>
+                <div class="bb-impact-label">CLIENT SATISFACTION</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="bb-contact" id="contact">
+        <div class="bb-section-title">CONTACT</div>
+        <div class="bb-contact-content">
+            <div class="bb-contact-block">
+                <div class="bb-contact-label">General</div>
+                <div class="bb-contact-info">info@apexmarketing.com</div>
+            </div>
+            <div class="bb-contact-block">
+                <div class="bb-contact-label">Social</div>
+                <div class="bb-contact-info">
+                    <a href="https://www.linkedin.com/in/ali-ahmed-843847345" class="bb-social-link">
+                        <i class="fab fa-linkedin"></i> LinkedIn
+                    </a>
+                    <span style="margin: 0 10px;">/</span>
+                    <a href="https://www.instagram.com/alii.ahmmd/" class="bb-social-link">
+                        <i class="fab fa-instagram"></i> Instagram
+                    </a>
+                </div>
+            </div>
+            <div class="bb-contact-block bb-contact-form-block">
+                <div class="bb-contact-label">Project Inquiry</div>
+                <form class="bb-contact-form">
+                    <input type="text" name="name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                    <input type="tel" name="number" placeholder="Your Phone Number" required>
+                    <textarea name="details" placeholder="Tell us about your project..." rows="4" required></textarea>
+                    <button type="submit" class="btn-primary">Send Inquiry</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bb-footer">
+        <div class="bb-footer-content">
+            <div style="font-weight:900; text-align:center; width:100%;">APEX</div>
+            <div>&copy; 2024 Apex Marketing Services. All Rights Reserved.</div>
+        </div>
+    </footer>
+
+    <script>
+        // Simple Animation on Scroll
+        document.addEventListener('DOMContentLoaded', function() {
+            // Mobile Navigation Toggle
+            const navToggle = document.getElementById('bb-nav-toggle');
+            const nav = document.getElementById('bb-nav');
+            
+            if (navToggle) {
+                navToggle.addEventListener('click', function() {
+                    nav.classList.toggle('active');
+                });
+            }
+            
+            // Simple animation effect for elements as they come into view
+            const animateOnScroll = function() {
+                const elements = document.querySelectorAll('.bb-section-title, .bb-work-card, .bb-service-card, .bb-impact-card, .bb-contact-block');
+                
+                elements.forEach(element => {
+                    const elementTop = element.getBoundingClientRect().top;
+                    const windowHeight = window.innerHeight;
+                    
+                    if (elementTop < windowHeight - 100) {
+                        element.style.opacity = '1';
+                        element.style.transform = 'translateY(0)';
+                    } else {
+                        element.style.opacity = '0';
+                        element.style.transform = 'translateY(30px)';
+                    }
+                });
+            };
+            
+            // Set initial styles for animation
+            const elementsToAnimate = document.querySelectorAll('.bb-section-title, .bb-work-card, .bb-service-card, .bb-impact-card, .bb-contact-block');
+            elementsToAnimate.forEach(element => {
+                element.style.opacity = '0';
+                element.style.transform = 'translateY(30px)';
+                element.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            });
+            
+            // Trigger animations on page load and scroll
+            animateOnScroll();
+            window.addEventListener('scroll', animateOnScroll);
+            
+            // Simple Counter Animation for Impact Numbers
+            const impactNumbers = document.querySelectorAll('.bb-impact-number');
+            
+            impactNumbers.forEach(number => {
+                const target = number.textContent;
+                let suffix = '';
+                
+                // Handle special cases like '1M+' or '100%'
+                if (target.includes('M+')) {
+                    number.setAttribute('data-target', '1000000');
+                    suffix = 'M+';
+                } else if (target.includes('%')) {
+                    number.setAttribute('data-target', target.replace('%', ''));
+                    suffix = '%';
+                } else {
+                    number.setAttribute('data-target', target);
+                }
+                
+                number.textContent = '0';
+                
+                const updateCounter = () => {
+                    const target = parseInt(number.getAttribute('data-target'));
+                    const current = parseInt(number.textContent);
+                    
+                    // Increment rate based on target value
+                    const increment = target > 100 ? Math.ceil(target / 20) : 1;
+                    
+                    if (current < target) {
+                        number.textContent = current + increment;
+                        setTimeout(updateCounter, 50);
+                    } else {
+                        if (suffix) {
+                            if (suffix === 'M+') {
+                                number.textContent = '1M+';
+                            } else {
+                                number.textContent = target + suffix;
+                            }
+                        } else {
+                            number.textContent = target;
+                        }
+                    }
+                };
+                
+                // Start counter when element is in view
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            updateCounter();
+                            observer.unobserve(entry.target);
+                        }
+                    });
+                }, { threshold: 0.5 });
+                
+                observer.observe(number);
+            });
+        });
+    </script>
+</body>
+</html>
